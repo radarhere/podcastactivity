@@ -3,17 +3,19 @@ function getDirectory() {
 	return dirname(__FILE__);
 }
 
-function absolutePath($filename) {
+function getAbsolutePath($filename) {
 	return getDirectory().'/'.$filename;
 }
 
 function logDownload($filename) {
-	if (!is_writable(getDirectory())) return;
+	if (!is_writable(getDirectory())) {
+		return;
+	}
 	
 	$logPath = absolutePath('activity.log');
-
+	
 	$entry = "\n".date('l d/m/y g:i A').' - '.$filename;
-
+	
 	$fh = fopen($logPath, 'a');
 	fwrite($fh, $entry);
 	fclose($fh);
@@ -28,7 +30,7 @@ if (!isset($_GET['file'])) {
 		$path .= '&'.implode('&', array_keys($_GET));
 	}
 	
-	$file = absolutePath($path.'.mp3');
+	$file = getAbsolutePath($path.'.mp3');
 	if (!file_exists($file)) {
 		header("HTTP/1.0 404 Not Found");
 		exit();
