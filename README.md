@@ -4,7 +4,7 @@ Podcast Activity Logger
 
 ## What is it?
 
-Podcast Activity Logger is very simple - one PHP file and a .htaccess file.
+Podcast Activity Logger is very simple - one PHP file and an .htaccess file.
 
 I manage a podcast.
 
@@ -12,7 +12,7 @@ I know people who are involved with podcasts.
 
 Whenever I talk to them about how successful it is, or the possibility of extending it further, I hear the response that they don't know if it's justified, because they can't tell how many people are actually listening to the audio.
 
-Apple doesn't report usage information from iTunes, and so they resign themselves to maintaining this project that may either be vitally important or essentially worthless.
+Apple doesn't report usage information from iTunes, and so these people resign themselves to maintaining this project that may either be vitally important or essentially worthless.
 
 The solution seemed relatively obvious, but it's taken me a while to get around to it - use rewrite rules to process all MP3 file requests through a PHP script that then logs activity.
 
