@@ -12,7 +12,7 @@ function logDownload($filename) {
 		return;
 	}
 	
-	$logPath = absolutePath('activity.log');
+	$logPath = getAbsolutePath('activity.log');
 	
 	$entry = "\n".date('l d/m/y g:i A').' - '.$filename;
 	
